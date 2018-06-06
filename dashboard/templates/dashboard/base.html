@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>POS</title>
+
+    {% load staticfiles %}
+    <!-- Bootstrap -->
+    <link href="{% static 'dashboard/bootstrap.min.css' %}" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="{% static 'dashboard/font-awesome.min.css' %}" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="{% static 'dashboard/nprogress.css' %}" rel="stylesheet">
+    <!-- iCheck -->
+    <link href="{% static 'dashboard/green.css' %}" rel="stylesheet">
+    <!-- Datatables -->
+    <link href="{% static 'dashboard/dataTables.bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'dashboard/buttons.bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'dashboard/fixedHeader.bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'dashboard/responsive.bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'dashboard/scroller.bootstrap.min.css' %}" rel="stylesheet">
+    <!-- Custom Theme Style -->
+    <link href="{% static 'dashboard/custom.min.css' %}" rel="stylesheet">
+</head>
+
+<body class="nav-md">
+<div class="container body">
+    <div class="main_container">
+        <div class="col-md-3 left_col">
+            <div class="left_col scroll-view">
+                <div class="navbar nav_title" style="border: 0;">
+                    <a href="{% url 'dashboard:index' %}" class="site_title"><i class="fa fa-paw"></i> <span>POS</span></a>
+                </div>
+
+                <div class="clearfix"></div>
+
+                <br/>
+
+                <!-- sidebar menu -->
+                <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+                    <div class="menu_section">
+                        <h3>General</h3>
+                        <ul class="nav side-menu">
+                            <li><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
+                                <ul class="nav child_menu">
+                                    <li><a href="{% url 'dashboard:index' %}">Dashboard</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- /sidebar menu -->
+            </div>
+        </div>
+
+        <!-- top navigation -->
+        <div class="top_nav">
+            <div class="nav_menu">
+                <nav>
+                    <div class="nav toggle">
+                        <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- /top navigation -->
+
+        <!-- page content -->
+        {% block page %}{% endblock %}
+        <!-- /page content -->
+
+        <!-- footer content -->
+        <footer>
+            <div class="pull-right">
+                POS by <a href="https://github.com/danbok/">Danil Bokov</a>
+            </div>
+            <div class="clearfix"></div>
+        </footer>
+        <!-- /footer content -->
+
+    </div>
+</div>
+
+<!-- jQuery -->
+<script src="{% static 'dashboard/js/jquery.min.js' %}"></script>
+<!-- Bootstrap -->
+<script src="{% static 'dashboard/js/bootstrap.min.js' %}"></script>
+<!-- FastClick -->
+<script src="{% static 'dashboard/js/fastclick.js' %}"></script>
+<!-- NProgress -->
+<script src="{% static 'dashboard/js/nprogress.js' %}"></script>
+<!-- iCheck -->
+<script src="{% static 'dashboard/js/icheck.min.js' %}"></script>
+<!-- Datatables -->
+<script src="{% static 'dashboard/js/jquery.dataTables.min.js' %}"></script>
+<script src="{% static 'dashboard/js/dataTables.bootstrap.min.js' %}"></script>
+<script src="{% static 'dashboard/js/dataTables.buttons.min.js' %}"></script>
+<script src="{% static 'dashboard/js/buttons.bootstrap.min.js' %}"></script>
+<script src="{% static 'dashboard/js/buttons.flash.min.js' %}"></script>
+<script src="{% static 'dashboard/js/buttons.html5.min.js' %}"></script>
+<script src="{% static 'dashboard/js/buttons.print.min.js' %}"></script>
+<script src="{% static 'dashboard/js/dataTables.fixedHeader.min.js' %}"></script>
+<script src="{% static 'dashboard/js/dataTables.keyTable.min.js' %}"></script>
+<script src="{% static 'dashboard/js/dataTables.responsive.min.js' %}"></script>
+<script src="{% static 'dashboard/js/responsive.bootstrap.js' %}"></script>
+<script src="{% static 'dashboard/js/datatables.scroller.min.js' %}"></script>
+<script src="{% static 'dashboard/js/jszip.min.js' %}"></script>
+<script src="{% static 'dashboard/js/pdfmake.min.js' %}"></script>
+<script src="{% static 'dashboard/js/vfs_fonts.js' %}"></script>
+<!-- Custom Theme Scripts -->
+<script src="{% static 'dashboard/js/custom.min.js' %}"></script>
+
+{% block script %}{% endblock %}
+
+</body>
+</html>
